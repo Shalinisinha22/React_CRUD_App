@@ -7,7 +7,6 @@ import {
     Image,
     KeyboardAvoidingView,
     TextInput,
-    Alert,
     ScrollView,
     ImageBackground,
     Dimensions,
