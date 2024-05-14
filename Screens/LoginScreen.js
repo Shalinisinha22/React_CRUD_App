@@ -2,16 +2,24 @@ import {
     StyleSheet,
     Text,
     View,
+    SafeAreaView,
     TouchableOpacity,
+    Image,
     KeyboardAvoidingView,
     TextInput,
+    Alert,
     ScrollView,
     ImageBackground,
     Dimensions,
   } from "react-native";
   import React, { useState, useEffect } from "react";
   import { MaterialIcons } from "@expo/vector-icons";
+  import { AntDesign } from "@expo/vector-icons";
+  import { Ionicons,FontAwesome } from "@expo/vector-icons";
+ 
+  import { Fontisto,Entypo } from '@expo/vector-icons';
 
+  import AsyncStorage from "@react-native-async-storage/async-storage";
    import { useDispatch } from "react-redux";
 
 import axios from "axios";
@@ -21,10 +29,17 @@ import axios from "axios";
    
   const LoginScreen = ({navigation}) => {
    
-    const [hidePass, setHidePass] = useState(true); 
+    const [hidePass, setHidePass] = useState(true);
+  
+
+ 
+    
     const [password, setPassword] = useState("");
+   
+
     const [error, setErr] = useState("");
     const [isFormValid, setIsFormValid] = useState(false);
+  
     const [flag,setFlag]=useState(false);
     const [email,setEmail] = useState("")
     const dispatch = useDispatch()
@@ -114,7 +129,7 @@ import axios from "axios";
       <View style={{backgroundColor:"white"}}>
            <ImageBackground style={{width:width,height:height,alignItems:"center",paddingTop:100}}>
             <ScrollView>
-       
+        
 
   
           <KeyboardAvoidingView>
@@ -220,7 +235,12 @@ import axios from "axios";
   export default LoginScreen;
   
   const styles = StyleSheet.create({
- 
+  
+    img: {
+      width: 120,
+      height: 80,
+      resizeMode:"contain"
+    },
     heading: {
       fontSize: 17,
       fontWeight: "bold",
