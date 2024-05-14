@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "ShaliniReactTask",
-    "slug": "ShaliniReactTask",
+    "slug": "shalini-crud-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,10 +18,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.shalinisinha.shalinicrudapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1e263cab-6a37-4b16-9d8d-c0d0fedf6fe4"
+      }
+    },
+    "owner": "shalinisinha"
   }
 }
